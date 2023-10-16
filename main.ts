@@ -5,7 +5,7 @@
  * This program turns on certain amounts of light depending on the light level
 */
 
-let lightvalue: number 
+let lightvalue: number = 0
 lightvalue = input.lightLevel()
 let neopixelStrip: neopixel.Strip = null
 
@@ -24,18 +24,20 @@ input.onButtonPressed(Button.A, function () {
   lightvalue = input.lightLevel()
   if (lightvalue <= 51) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-}
+  }
 
   if (lightvalue >= 52) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
-}
+  }
+
   if (lightvalue >= 104) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
-}
+  }
+
   if (lightvalue >= 156) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
@@ -43,7 +45,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
-}
+  }
 
   if (lightvalue >= 208) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
@@ -54,7 +56,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
     neopixelStrip.show()
-}
+  }
 })
 input.onButtonPressed(Button.B, function () {
   // On button B
