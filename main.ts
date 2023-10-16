@@ -9,7 +9,7 @@ let lightvalue: number
 lightvalue = input.lightLevel()
 let neopixelStrip: neopixel.Strip = null
 
-// screen setup
+// clean up
 basic.clearScreen()
 neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
@@ -20,6 +20,7 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
+  // on button A
   lightvalue = input.lightLevel()
   if (lightvalue <= 51) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
@@ -56,6 +57,7 @@ input.onButtonPressed(Button.A, function () {
 }
 })
 input.onButtonPressed(Button.B, function () {
+  // on button B
   basic.clearScreen()
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
