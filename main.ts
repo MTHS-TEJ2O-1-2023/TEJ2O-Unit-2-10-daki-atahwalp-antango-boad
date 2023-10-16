@@ -5,7 +5,7 @@
  * This program turns on certain amounts of light depending on the light level
 */
 
-let lightvalue: number 
+let lightvalue: number
 lightvalue = input.lightLevel()
 let neopixelStrip: neopixel.Strip = null
 
@@ -24,38 +24,50 @@ input.onButtonPressed(Button.A, function () {
   lightvalue = input.lightLevel()
   if (lightvalue <= 51) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-}
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.showString('0')
+  }
 
   if (lightvalue >= 52) {
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-}
+    basic.showString('1')
+  }
+
   if (lightvalue >= 104) {
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-}
+    basic.showString('2')
+  }
+
   if (lightvalue >= 156) {
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-}
+    basic.showString('3')
+  }
 
   if (lightvalue >= 208) {
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Violet))
     neopixelStrip.show()
-}
+    basic.showString('4')
+  }
 })
+
 input.onButtonPressed(Button.B, function () {
   // On button B
   basic.clearScreen()
