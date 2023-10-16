@@ -5,7 +5,7 @@
  * This program turns on certain amounts of light depending on the light level
 */
 
-let lightvalue: number = 0
+let lightvalue: number 
 lightvalue = input.lightLevel()
 let neopixelStrip: neopixel.Strip = null
 
