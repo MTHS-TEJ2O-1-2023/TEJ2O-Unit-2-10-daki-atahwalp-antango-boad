@@ -1,6 +1,6 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
+Created by: Daki A.B
+Created on: Oct 2023
 This module turns on certain RGB LEDs based on the light level
 """
 
